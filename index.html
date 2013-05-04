@@ -1,119 +1,198 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>		 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>		   <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>		   <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="css/flat-ui.css">
+		<link rel="stylesheet" href="css/main.css">
+		
+		<style>
+		body {
+		padding-top: 120px;
+		font-size: 16px;
+		line-height: 30px;
+		background: url('img/colabmail_t.png') -500px -200px no-repeat; }
+		.intro {
+		font-size: 20px;
+		line-height: 36px;
+		}
+		p {
+		padding: 0 0 40px 0;
+		}
+		.row {
+		margin-bottom: 60px;
+		}
+		.menubar {
+		background-color: white;
+		position: fixed;
+		top:0;
+		right:0;
+		left:0;
+		padding: 10px 0;
+		box-shadow: 0px 3px 0px rgba(0,0,0,0.1);
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+		}
+		h1 {
+		margin: 0;
+		}
+		h1, h2, h3, .logo {
+		font-family: 'brandon';
+		}
+		.logo {
+			font-size: 30px;
+		}
+		</style>
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">Project name</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class="navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
+		<div class="menubar">
+			<div class="container">
+				<img src="img/colabmail_s.png"/>
+				<span class="logo">ColabMail</span>
+			</div>
+		</div>
 
-        <div class="container">
+		 <div class="container">
+	
+			 <div id="register" class="login" style="display:none;background:none;padding-bottom:0px;margin-bottom: 30px;">
+				 <div class="login-screen">
+					 <div class="login-icon">
+						 <img src="images/login/icon.png" alt="Register to ColabMail" />
+						 <h4>Register to <small>ColabMail</small></h4>
+					 </div>
+	
+					 <div class="login-form">
+						 <div class="control-group">
+						 <input required type="email" class="login-field" name="email" value="" placeholder="Enter your email" id="email" />
+						 <label class="login-field-icon fui-man-16" for="email"></label>
+						 </div>
+	
+						 <div class="control-group">
+						 <input required type="text" class="login-field" name="howmany" value="" placeholder="How many users to apply" id="howmany" />
+						 <label class="login-field-icon fui-man-16" for="howmany"></label>
+						 </div>
+	
+						 <a onclick="register($(this))" class="register" href="#">
+							 <img src="https://www.paypalobjects.com/en_US/i/bnr/bnr_MSPFbanner_ec2_143x32.gif" />
+						 </a>
+						 
+						 <img src="images/indicator.gif" style="display:none;margin-left:10px;"/>
+						 
+					 </div>
+					 
+				 </div>
+			 </div>
+			 
+			 <div class="row">
+			 	<div class="span1"></div>
+					 <div class="span6">
+					 
+					 <h2> Mail for teams the right way</h2>
+					 <p class="intro">
+						 Email is the heart of any business. Productivity tools, to do lists, calendar, Evernote, they all make collaboration easier, but can only compliment and not replace email. There are many solutions out there to manage email in a more efficient way, but they all revolve around the way you prioritize and respond to email, ignoring the fact that what makes your inbox bulky most of the time is the need to cc and fwd email in order to respond to an issue or set up a meeting. ColabMail focuses on the need to collaborate via email while keeping your inbox lean.
+					 </p>
+					 <h2>The problem</h2>
+					 <p>
+						 Email is the ultimate task list. Each and every email is one task that needs to be discussed, optimized and finally executed by your team. But how can someone collaborate on an email? Most users just forward an email to their colleagues, then they create a task in their favorite tool, then they'll discuss the task in Skype and finally at some point the work gets done. This is obviously a messy way to get things done. We believe there is a better way and here is our proposal for the future.
+					 </p>
+					 <h2>Socializing email</h2>
+					 <p>
+						 ColabMail aims to enable users to collaborate straight from their email client. By adding a layer of collaboration on top of an email that needs to be share, ColabMail will offer the possibility for collaborators to have a shared view of the email, annotations and notes on it and a dedicated chat section. We believe that those additions will revolutionize the way startups, bigger companies and freelancers handle collaboration tasks and manage email.
+Processes like customer support, sales leads, setting up meetings and even product development can become more efficient and less time consuming with ColabMail. 
+					 </p>
+					 <h2>How</h2>
+					 <p>We'll start with Gmail by creating a Firefox Addon that will offer:
+					  <ul>
+						 <li>Email sharing with team members</li>
+						 <li>Chat inside the thread</li>
+						 <li>Annotations and notes inside emails</li>
+					 </ul>
+					 </p>
+					 <h2>Sign up today!</h2>
+					 <p>
+						 ColabMail will be a subscription service and we want to be sure that there are people out there that need this tool as much as we do and are willing to pay for it. Subscription to ColabMail will cost $3 per month. Pre-approve your subscription with PayPal ColabMail today, to get regular updates on our progress and help us build the best tool possible for your needs. By pre-ordering ColabMail service you won’t get charged anything until the service is live.
+					 </p>
+					 <a id="pre-order" href="http://venturegeeks.com/register" class="fancy-register btn btn-large btn-block btn-success">Pre-order now!</a>
+					 <br />
+					 When product launches subscription cost will be $5 per month.
+					 </div>
+					 <div class="span1"></div>
+					 <div class="span4">
+							<div class="tile" style="text-align: left;">
+								<h2>10 sign-ups</h2>
+								 <div class="progress">
+								  <div class="bar" style="width: 0%;"></div>
+								 </div>
+								 We'll launch once we reach 15.000 sign-ups!
+								 <hr />
+								 <a href="http://venturegeeks.com/register" class="fancy-register btn btn-large btn-block btn-success">Get yours!</a>
+								 <br />
+								 <small>* You wont get charged until the product is ready.</small><br>
+								 <small style="color:red;font-size:10px;">* If you are not happy with the result once we launch you can refund your charge.</small>
+							</div>
+					 </div>
+				 </div> <!-- /row -->
+						 
+		 </div> <!-- /container -->
+		 
+		 <footer>
+			 <div class="container">
+			 <div class="row" style="margin-bottom:0;">
+				  <div class="span7">
+				 <h2 class="footer-title">Who are you guys?</h2>
+				 <p>
+				   Glad you asked. We are <a href="http://venturegeeks.com/">VentureGeeks</a>, an experienced team of web developers who are passionate about the web.
+				   You can check our <a href="http://venturegeeks.com/">web site</a> or our other <a href="http://instabuck.com">products</a> to see for your self that we can deliver our promise.
+				   <br/><br />
+				   Our design was done by <a href="http://www.superpencil.com" target="_blank">Superpencil</a>
+				 </p>
+	
+				 
+				  </div> <!-- /span8 -->
+	
+				  <div class="span5">
+				 <div class="footer-banner">
+				   <h2 class="footer-title">We are Social</h2>
+				   <ul>
+						<li><a href="https://facebook.com/VentureGeeks">Facebook</a></li>
+						<li><a href="https://twitter.com/VentureGeeks">Twitter</a></li>
+						<li><a href="https://plus.google.com/105364802485252835027">Google+</a></li>
+						<li><a href="http://www.youtube.com/user/VentureGeeks">YouTube</a></li>
+				   </ul>
+				 </div>
+				  </div>
+			 </div>
+			 </div>
+		 </footer>
 
-            <!-- Main hero unit for a primary marketing message or call to action -->
-            <div class="hero-unit">
-                <h1>Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-            </div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="span4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="span4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-               </div>
-                <div class="span4">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-                </div>
-            </div>
+		<script src="js/vendor/bootstrap.min.js"></script>
 
-            <hr>
+		<script src="js/main.js"></script>
 
-            <footer>
-                <p>&copy; Company 2012</p>
-            </footer>
-
-        </div> <!-- /container -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+		<script>
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
 </html>
