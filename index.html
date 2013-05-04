@@ -16,8 +16,18 @@
 		<link rel="stylesheet" href="css/main.css">
 		
 		<style>
+		@font-face {
+		    font-family: 'brandon';
+		    src: url('../font/brandon_bld-webfont.eot');
+		    src: url('../font/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../font/brandon_bld-webfont.woff') format('woff'),
+		         url('../font/brandon_bld-webfont.ttf') format('truetype'),
+		         url('../font/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
+		    font-weight: bold;
+		    font-style: normal;
+		}
 		body {
-		padding-top: 120px;
+		padding-top: 60px;
 		font-size: 16px;
 		line-height: 30px;
 		background: url('img/colabmail_t.png') -500px -200px no-repeat; }
@@ -29,7 +39,8 @@
 		padding: 0 0 40px 0;
 		}
 		.row {
-		margin-bottom: 60px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 		}
 		.menubar {
 		background-color: white;
@@ -47,8 +58,9 @@
 		h1, h2, h3, .logo {
 		font-family: 'brandon';
 		}
-		.logo {
-			font-size: 30px;
+		@media (max-width: 979px) {
+			body {
+			padding-top: 0px;}
 		}
 		</style>
 
@@ -61,10 +73,16 @@
 
 		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-		<div class="menubar">
-			<div class="container">
-				<img src="img/colabmail_s.png"/>
-				<span class="logo">ColabMail</span>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="#"><img src="img/colabmail_s.png"/> <span class="logo">ColabMail</span></a>
+				</div>
 			</div>
 		</div>
 
@@ -162,20 +180,21 @@ Processes like customer support, sales leads, setting up meetings and even produ
 		 <footer>
 			 <div class="container">
 			 <div class="row" style="margin-bottom:0;">
-				  <div class="span7">
+				 <div class="span1"></div>
+				 <div class="span5">
 				 <h2 class="footer-title">Who are you guys?</h2>
 				 <p>
 				   Glad you asked. We are <a href="http://venturegeeks.com/">VentureGeeks</a>, an experienced team of web developers who are passionate about the web.
 				   You can check our <a href="http://venturegeeks.com/">web site</a> or our other <a href="http://instabuck.com">products</a> to see for your self that we can deliver our promise.
 				   <br/><br />
-				   Our design was done by <a href="http://www.superpencil.com" target="_blank">Superpencil</a>
+				   Logo & design by <a href="http://www.superpencil.com" target="_blank">Superpencil</a>
 				 </p>
 	
 				 
 				  </div> <!-- /span8 -->
-	
-				  <div class="span5">
-				 <div class="footer-banner">
+				  <div class="span1"></div>
+				  <div class="span4">
+				 <div class="footer">
 				   <h2 class="footer-title">We are Social</h2>
 				   <ul>
 						<li><a href="https://facebook.com/VentureGeeks">Facebook</a></li>
