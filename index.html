@@ -16,24 +16,10 @@
 		<link rel="stylesheet" href="css/main.css">
 		
 		<style>
-		@font-face {
-		    font-family: 'brandon';
-		    src: url('font/brandon_bld-webfont.eot');
-		    src: url('font/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('font/brandon_bld-webfont.woff') format('woff'),
-		         url('font/brandon_bld-webfont.ttf') format('truetype'),
-		         url('font/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
-		    font-weight: bold;
-		    font-style: normal;
-		}
 		body {
-		padding-top: 60px;
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 30px;
-		background: url('img/colabmail_t.png') -500px -200px no-repeat; }
-		.intro {
-		font-size: 20px;
-		line-height: 36px;
+		color: #95a7a7;
 		}
 		p {
 		padding: 0 0 40px 0;
@@ -42,25 +28,63 @@
 		margin-top: 30px;
 		margin-bottom: 30px;
 		}
-		.menubar {
-		background-color: white;
-		position: fixed;
-		top:0;
-		right:0;
-		left:0;
-		padding: 10px 0;
-		box-shadow: 0px 3px 0px rgba(0,0,0,0.1);
-		border-bottom: 1px solid rgba(0,0,0,0.2);
+		footer {
+			background-color: #e2e9e9;
 		}
 		h1 {
 		margin: 0;
 		}
 		h1, h2, h3, .logo {
-		font-family: 'brandon';
+		color: #0580be;
+		}
+		.btn.btn-success {
+		background-color: #80c413;
+		}
+		.animation {
+			background: #e2e9e9;
+			height: 300px;
+			padding: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+		.animation h2 {
+			text-align: center;
+			color: #95a7a7;
+		}
+		.animation .frames {
+			width: 150px;
+			margin-left: 145px;
+			margin-top: 30px;
+			position: relative;
+		}
+		.email {
+			position: absolute;
+			margin-top: -250px;
+		}
+		.inbox-red, .inbox-green {
+			position: absolute;
+			bottom: -400px;
+		}
+		.skype, .arrow, .evernote, .cc, .arrow {
+			display: none;
+		}
+		.animation .messages {
+			text-align: center;
+			color: #95a7a7;
+			position: absolute;
+			width: 440px;
+			bottom: 20px;
 		}
 		@media (max-width: 979px) {
 			body {
-			padding-top: 0px;}
+				padding-top: 0px;
+			}
+		}
+		@media (min-width: 1200px) {
+			.animation .frames {
+				margin-left: 180px;
+				margin-top: 55px;
+			}
 		}
 		</style>
 
@@ -71,22 +95,56 @@
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="brand" href="#"><img src="img/colabmail_s.png"/> <span class="logo">ColabMail</span></a>
+		<div class="container">
+	
+			<div class="row">
+				<div class="span12">
+					<h2 style="text-align:center;margin-left:-20px;">This is how we use e-mail</h2>
 				</div>
 			</div>
+			<div class="row">
+				<div class="span6">
+					<div class="animation ani1">
+						<h2>today</h2>
+						<div class="frames">
+							<div class="inbox-red"><img src="img/red_inbox.png" /></div>
+							<div class="inbox-green"><img src="img/green_inbox.png" /></div>
+							<div class="email"><img src="img/mail.png" /></div>
+							<div class="skype"><img src="img/skype.png" /></div>
+							<div class="evernote"><img src="img/evernote.png" /></div>
+							<div class="arrow"><img src="img/arrow.png" /></div>
+							<div class="cc"><img src="img/cc.png" /></div>
+						</div>
+						<h2 class="messages"></h2>
+					</div>
+				</div>
+				<div class="span6">
+					<div class="animation ani2">
+						<h2>tomorrow</h2>
+						<div class="frames">
+							<div class="inbox-green"><img src="img/green_inbox.png" /></div>
+							<div class="email"><img src="img/mail.png" /></div>
+							<div class="skype"><img src="img/skype.png" /></div>
+							<div class="evernote"><img src="img/evernote.png" /></div>
+							<div class="arrow"><img src="img/arrow.png" /></div>
+							<div class="cc"><img src="img/cc.png" /></div>
+						</div>
+						<h2 class="messages"></h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h2 style="margin-top:-10px;">We need your help building the future.</h2>
+				</div>
+				<div class="span6">
+					<img src="img/logo.png"/>
+				</div>
+			</div>
+		
 		</div>
-
-		 <div class="container">
+		
+		<div class="container">
 	
 			 <div id="register" class="login" style="display:none;background:none;padding-bottom:0px;margin-bottom: 30px;">
 				 <div class="login-screen">
@@ -118,43 +176,50 @@
 			 </div>
 			 
 			 <div class="row">
-			 	<div class="span1"></div>
-				 <div class="span6">
+				 <div class="span8">
 				 
 				 <h2> Mail for teams the right way</h2>
 				 <p class="intro">
 					 Email is the heart of any business. Productivity tools, to do lists, calendar, Evernote, they all make collaboration easier, but can only compliment and not replace email. There are many solutions out there to manage email in a more efficient way, but they all revolve around the way you prioritize and respond to email, ignoring the fact that what makes your inbox bulky most of the time is the need to cc and fwd email in order to respond to an issue or set up a meeting. ColabMail focuses on the need to collaborate via email while keeping your inbox lean.
 				 </p>
+				 
 				 </div>
-				 <div class="span1"></div>
-				 <div class="span3">
-						<div class="tile" style="text-align: left;">
-							<h2>10 sign-ups</h2>
-							 <div class="progress">
-							  <div class="bar" style="width: 0%;"></div>
-							 </div>
-							 We'll launch once we reach 15.000 sign-ups!
-							 <hr />
-							 <a href="http://venturegeeks.com/register" class="fancy-register btn btn-large btn-block btn-success">Get yours!</a>
-							 <br />
-							 <small>* You wont get charged until the product is ready.</small><br>
-							 <small style="color:red;font-size:10px;">* If you are not happy with the result once we launch you can refund your charge.</small>
-						</div>
+				 <div class="span4">
+				 	<img src="img/green_inbox.png" />
 				 </div>
-				 <div class="span1"></div>
 			 </div>
-			<div class="row">
-			 	<div class="span1"></div>
-			 	<div class="span10">
+			 
+			 <div class="row">
+			 	<div class="span4">
+				 	<img src="img/green_inbox.png" />
+				 </div>
+				 <div class="span8">
+
 					 <h2>The problem</h2>
-					 <p>
-						 Email is the ultimate task list. Each and every email is one task that needs to be discussed, optimized and finally executed by your team. But how can someone collaborate on an email? Most users just forward an email to their colleagues, then they create a task in their favorite tool, then they'll discuss the task in Skype and finally at some point the work gets done. This is obviously a messy way to get things done. We believe there is a better way and here is our proposal for the future.
-					 </p>
+					 <p>Email is the ultimate task list. Each and every email is one task that needs to be discussed, optimized and finally executed by your team. But how can someone collaborate on an email? Most users just forward an email to their colleagues, then they create a task in their favorite tool, then they'll discuss the task in Skype and finally at some point the work gets done. This is obviously a messy way to get things done. We believe there is a better way and here is our proposal for the future.</p>
+					 
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="span8">
+					 
 					 <h2>Socializing email</h2>
-					 <p>
-						 ColabMail aims to enable users to collaborate straight from their email client. By adding a layer of collaboration on top of an email that needs to be share, ColabMail will offer the possibility for collaborators to have a shared view of the email, annotations and notes on it and a dedicated chat section. We believe that those additions will revolutionize the way startups, bigger companies and freelancers handle collaboration tasks and manage email.
-Processes like customer support, sales leads, setting up meetings and even product development can become more efficient and less time consuming with ColabMail. 
-					 </p>
+					 <p>ColabMail aims to enable users to collaborate straight from their email client. By adding a layer of collaboration on top of an email that needs to be share, ColabMail will offer the possibility for collaborators to have a shared view of the email, annotations and notes on it and a dedicated chat section. We believe that those additions will revolutionize the way startups, bigger companies and freelancers handle collaboration tasks and manage email.
+Processes like customer support, sales leads, setting up meetings and even product development can become more efficient and less time consuming with ColabMail.</p>
+					 
+				 </div>
+				 <div class="span4">
+				 	<img src="img/green_inbox.png" />
+				 </div>
+			 </div>
+			 
+			 <div class="row">
+			 	<div class="span4">
+				 	<img src="img/green_inbox.png" />
+				 </div>
+				 <div class="span8">
+					 
 					 <h2>How</h2>
 					 <p>We'll start with Gmail by creating a Firefox Addon that will offer:
 					  <ul>
@@ -163,15 +228,34 @@ Processes like customer support, sales leads, setting up meetings and even produ
 						 <li>Annotations and notes inside emails</li>
 					 </ul>
 					 </p>
+					 
+				 </div>
+			 </div>
+			 
+			 <div class="row">
+				 <div class="span8">
+					 
 					 <h2>Sign up today!</h2>
 					 <p>
 						 ColabMail will be a subscription service and we want to be sure that there are people out there that need this tool as much as we do and are willing to pay for it. Subscription to ColabMail will cost $3 per month. Pre-approve your subscription with PayPal ColabMail today, to get regular updates on our progress and help us build the best tool possible for your needs. By pre-ordering ColabMail service you won’t get charged anything until the service is live.
 					 </p>
-					 <a id="pre-order" href="http://venturegeeks.com/register" class="fancy-register btn btn-large btn-block btn-success">Pre-order now!</a>
-					 <br />
-					 When product launches subscription cost will be $5 per month.
+					 <a id="pre-order" href="http://venturegeeks.com/register" class="fancy-register btn btn-large btn-block btn-success">Pre-order now!</a><br>
+					 <ol>
+					 <li>When product launches subscription cost will be $5 per month.</li>
+					 <li>You wont get charged until the product is ready.</li>
+					 <li>If you are not happy with the result once we launch you can refund your charge.</li>
+					 </ol>
+					 
 					 </div>
-			 	<div class="span1"></div>
+			 	<div class="span4">
+					<div class="tile" style="text-align: left;">
+						<h2>10 sign-ups</h2>
+						 <div class="progress">
+						  <div class="bar" style="width: 0%;"></div>
+						 </div>
+						 We'll launch once we reach 15.000 sign-ups<br>
+					</div>
+				 </div>
 					 
 			</div> <!-- /row -->
 						 
@@ -180,8 +264,7 @@ Processes like customer support, sales leads, setting up meetings and even produ
 		 <footer>
 			 <div class="container">
 			 <div class="row" style="margin-bottom:0;">
-				 <div class="span1"></div>
-				 <div class="span5">
+				 <div class="span8">
 				 <h2 class="footer-title">Who are you guys?</h2>
 				 <p>
 				   Glad you asked. We are <a href="http://venturegeeks.com/">VentureGeeks</a>, an experienced team of web developers who are passionate about the web.
@@ -192,7 +275,6 @@ Processes like customer support, sales leads, setting up meetings and even produ
 	
 				 
 				  </div> <!-- /span8 -->
-				  <div class="span1"></div>
 				  <div class="span4">
 				 <div class="footer">
 				   <h2 class="footer-title">We are Social</h2>
@@ -208,12 +290,166 @@ Processes like customer support, sales leads, setting up meetings and even produ
 			 </div>
 		 </footer>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="js/vendor/jquery-1.9.1.min.js"></script>
 
 		<script src="js/vendor/bootstrap.min.js"></script>
 
-		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			var today = function () {
+				$(".ani1 .email").show().css("margin-top", "-400px");
+				window.setTimeout(function () {
+				    $(".ani1 .email")
+			    	.animate({
+			    		marginTop: "0px"
+			    	}, 2000);
+			    	window.setTimeout(function () {
+						$(".ani1 .messages")
+						.text(
+							"You've got mail!"
+						);
+						window.setTimeout(function () {
+							$(".ani1 .email")
+					    	.animate({
+					    		right: "-500px"
+					    	}, 1000);
+					    	$(".ani1 .arrow").fadeIn();
+							$(".ani1 .messages")
+							.text(
+								"Forward to Bob"
+							);
+							$(".ani1 .arrow").fadeOut();
+							window.setTimeout(function () {
+			                    $(".ani1 .skype").fadeIn();
+								$(".ani1 .messages")
+								.text(
+									"Ask Bob if he understands the mail"
+								);
+								window.setTimeout(function () {
+									$(".ani1 .messages")
+									.text(
+										"Bob has an Evernote about it"
+									);
+									$(".ani1 .skype").fadeOut();
+			                        $(".ani1 .evernote").delay(500).fadeIn();
+			                        window.setTimeout(function () {
+			                        	$(".ani1 .evernote").fadeOut();
+			                        	$(".ani1 .email")
+								    	.animate({
+								    		right: "0px"
+								    	}, 1000);
+								    	$(".ani1 .messages")
+										.text(
+											"He'll show it to you later today"
+										);
+			                        	window.setTimeout(function () {
+				                        	$(".ani1 .inbox-red")
+									    	.animate({
+									    		bottom: "-160px"
+									    	}, 1000);
+									    	$(".ani1 .messages")
+											.text(
+												"Let's leave this for now."
+											);
+				                        	window.setTimeout(function () {
+				                        		$(".ani1 .email").hide();
+					                        	$(".ani1 .inbox-red")
+										    	.animate({
+										    		bottom: "-400px"
+										    	}, 1000);
+										    	$(".ani1 .messages")
+												.text(
+													" "
+												);
+					                        	today();
+					                        }, 2500);
+				                        }, 2500);
+			                        }, 2500);
+								}, 2500);
+							}, 2500);
+						}, 2500);
+					}, 2000);
+				}, 500);
+			};
+			var tomorrow = function () {
+				$(".ani2 .email").show().css("margin-top", "-400px");
+				window.setTimeout(function () {
+				    $(".ani2 .email")
+			    	.animate({
+			    		marginTop: "0px"
+			    	}, 2000);
+			    	window.setTimeout(function () {
+						$(".ani2 .messages")
+						.text(
+							"You've got mail!"
+						);
+						window.setTimeout(function () {
+							$(".ani2 .email")
+					    	.animate({
+					    		right: "-500px"
+					    	}, 1000);
+					    	$(".ani2 .arrow").fadeIn();
+							$(".ani2 .messages")
+							.text(
+								"Forward to Bob"
+							);
+							$(".ani2 .arrow").fadeOut();
+							window.setTimeout(function () {
+			                    $(".ani2 .skype").fadeIn();
+								$(".ani2 .messages")
+								.text(
+									"Ask Bob if he understands the mail"
+								);
+								window.setTimeout(function () {
+									$(".ani2 .messages")
+									.text(
+										"Bob has an Evernote about it"
+									);
+									$(".ani2 .skype").fadeOut();
+			                        $(".ani2 .evernote").delay(500).fadeIn();
+			                        window.setTimeout(function () {
+			                        	$(".ani2 .evernote").fadeOut();
+			                        	$(".ani2 .email")
+								    	.animate({
+								    		right: "0px"
+								    	}, 1000);
+								    	$(".ani2 .messages")
+										.text(
+											"He'll show it to you later today"
+										);
+			                        	window.setTimeout(function () {
+				                        	$(".ani2 .inbox-green")
+									    	.animate({
+									    		bottom: "-160px"
+									    	}, 1000);
+									    	$(".ani2 .messages")
+											.text(
+												"Let's leave this for now."
+											);
+				                        	window.setTimeout(function () {
+				                        		$(".ani2 .email").hide();
+					                        	$(".ani2 .inbox-green")
+										    	.animate({
+										    		bottom: "-400px"
+										    	}, 1000);
+										    	$(".ani2 .messages")
+												.text(
+													" "
+												);
+					                        	tomorrow();
+					                        }, 2500);
+				                        }, 2500);
+			                        }, 2500);
+								}, 2500);
+							}, 2500);
+						}, 2500);
+					}, 2000);
+				}, 500);
+			};
+			$(document).ready(function() {	
+				today();
+				tomorrow();
+			});
+		</script>
 
 		<script>
 			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
