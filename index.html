@@ -40,12 +40,18 @@
 		.btn.btn-success {
 		background-color: #80c413;
 		}
+		.hero {
+			background: #e2e9e9;
+			height: 300px;
+		}
+		.hidden-overflow {
+			overflow: hidden;
+		}
 		.animation {
 			background: #e2e9e9;
 			height: 200px;
 			padding: 10px;
 			position: relative;
-			overflow: hidden;
 		}
 		.animation h2 {
 			color: #95a7a7;
@@ -76,16 +82,28 @@
 			width: 440px;
 			bottom: 20px;
 		}
+		.subwrap {
+		}
+		.subwrap h2 {
+		}
+		.progress {
+		margin-top: 9px;
+		margin-bottom: 0px;
+		}
+		.subbar .row {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		}
+		.subbar {
+			background: #4380d6;
+			color: white;
+		}
 		@media (max-width: 979px) {
 			body {
 				padding-top: 0px;
 			}
 		}
 		@media (min-width: 1200px) {
-			.animation .frames {
-				margin-left: 180px;
-				margin-top: 55px;
-			}
 		}
 		</style>
 
@@ -96,47 +114,70 @@
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<div class="container">
-			<div class="row">
-				<div class="span12" style="text-align:center;">
-					<img width="250px" style="margin-left:-20px;" src="img/logo.png"/>
-				</div>
-			</div>
-	
-			<div class="row">
-				<div class="span6 ani1">
-					<h2 style="text-align:center;color:#f47c5d;">Current inbox count: <span class="counter">0</span></h2>
-				</div>
-				<div class="span6 ani2">
-					<h2 style="text-align:center;">Colabmail inbox count: <span class="counter">0</span></h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span6">
-					<div class="animation ani1">
-						<div class="frames">
-							<div class="inbox-red"><img src="img/red_inbox.png" /></div>
-							<div class="email"><img src="img/mail.png" /></div>
-							<div class="skype"><img src="img/skype.png" /></div>
-							<div class="evernote"><img src="img/evernote.png" /></div>
-							<div class="arrow"><img src="img/arrow.png" /></div>
-						</div>
-						<h2 class="messages"></h2>
+		<div class="hero">
+			<div class="container">
+				<div class="row">
+					<div class="span6">
+						<img width="300px" src="img/logo.png"/>
+						<br>
+						<br>
+						<h2>Mail for teams reinvented.</h2>
+						<h4>Right now e-mail is a hassle, it could be so much better, it's time for us to invent the next generation, and we need your help!</h4>
 					</div>
-				</div>
-				<div class="span6">
-					<div class="animation ani2">
-						<div class="frames">
-							<div class="email"><img src="img/mail.png" /></div>
-							<div class="using"><img src="img/tomorrow.png" /></div>
+					<div class="span6 hidden-overflow">
+						<div class="animation ani1">
+							<div class="frames">
+								<div class="inbox-red"><img src="img/red_inbox.png" /></div>
+								<div class="email"><img src="img/mail.png" /></div>
+								<div class="skype"><img src="img/skype.png" /></div>
+								<div class="evernote"><img src="img/evernote.png" /></div>
+								<div class="arrow"><img src="img/arrow.png" /></div>
+							</div>
+							<h2 class="messages"></h2>
 						</div>
-						<h2 class="messages"></h2>
 					</div>
 				</div>
 			</div>
-		
 		</div>
 		
+		<div class="subwrap">
+			<div class="subbar">
+				<div class="container">
+					<div class="row">
+						 <div class="span4">
+							<span class="signup_count">10 sign-ups</span>
+						 </div>
+						 <div class="span4">
+						 	<div class="progress">
+							  <div class="bar" style="width: 20%;"></div>
+							 </div>
+						 </div>
+						 <div class="span4">
+							 We'll launch once we reach 15.000 sign-ups
+						 </div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					 <div class="span8">
+						 <h2>Sign up today!</h2>
+						 <p>
+							 ColabMail will be a subscription service and we want to be sure that there are people out there that need this tool as much as we do and are willing to pay for it. Subscription to ColabMail will cost $3 per month. Pre-approve your subscription with PayPal ColabMail today, to get regular updates on our progress and help us build the best tool possible for your needs. By pre-ordering ColabMail service you won’t get charged anything until the service is live.
+						 </p>
+					 </div>
+				 	 <div class="span4">
+				 		<a id="pre-order" href="http://venturegeeks.com/register" class="fancy-register btn btn-large btn-block btn-success">Pre-order now!</a><br>
+						 <ol>
+						 <li>When product launches subscription cost will be $5 per month.</li>
+						 <li>You wont get charged until the product is ready.</li>
+						 <li>If you are not happy with the result once we launch you can refund your charge.</li>
+						 </ol>
+					 </div>
+				</div> <!-- /row -->
+			</div>
+		</div>
+
 		<div class="container">
 	
 			 <div id="register" class="login" style="display:none;background:none;padding-bottom:0px;margin-bottom: 30px;">
@@ -178,13 +219,11 @@
 				 
 				 </div>
 				 <div class="span4">
-				 	<img src="img/green_inbox.png" />
 				 </div>
 			 </div>
 			 
 			 <div class="row">
 			 	<div class="span4">
-				 	<img src="img/green_inbox.png" />
 				 </div>
 				 <div class="span8">
 
@@ -203,13 +242,11 @@ Processes like customer support, sales leads, setting up meetings and even produ
 					 
 				 </div>
 				 <div class="span4">
-				 	<img src="img/green_inbox.png" />
 				 </div>
 			 </div>
 			 
 			 <div class="row">
 			 	<div class="span4">
-				 	<img src="img/green_inbox.png" />
 				 </div>
 				 <div class="span8">
 					 
@@ -224,33 +261,6 @@ Processes like customer support, sales leads, setting up meetings and even produ
 					 
 				 </div>
 			 </div>
-			 
-			 <div class="row">
-				 <div class="span8">
-					 
-					 <h2>Sign up today!</h2>
-					 <p>
-						 ColabMail will be a subscription service and we want to be sure that there are people out there that need this tool as much as we do and are willing to pay for it. Subscription to ColabMail will cost $3 per month. Pre-approve your subscription with PayPal ColabMail today, to get regular updates on our progress and help us build the best tool possible for your needs. By pre-ordering ColabMail service you won’t get charged anything until the service is live.
-					 </p>
-					 <a id="pre-order" href="http://venturegeeks.com/register" class="fancy-register btn btn-large btn-block btn-success">Pre-order now!</a><br>
-					 <ol>
-					 <li>When product launches subscription cost will be $5 per month.</li>
-					 <li>You wont get charged until the product is ready.</li>
-					 <li>If you are not happy with the result once we launch you can refund your charge.</li>
-					 </ol>
-					 
-					 </div>
-			 	<div class="span4">
-					<div class="tile" style="text-align: left;">
-						<h2>10 sign-ups</h2>
-						 <div class="progress">
-						  <div class="bar" style="width: 0%;"></div>
-						 </div>
-						 We'll launch once we reach 15.000 sign-ups<br>
-					</div>
-				 </div>
-					 
-			</div> <!-- /row -->
 						 
 		 </div> <!-- /container -->
 		 
@@ -288,10 +298,15 @@ Processes like customer support, sales leads, setting up meetings and even produ
 		<script src="js/vendor/bootstrap.min.js"></script>
 
 		<script type="text/javascript">
-			var c1 = 21;
-			$(".ani1 .counter").text(c1);
-			var c2 = 0;
-			$(".ani2 .counter").text(c2);
+		
+			$(window).scroll(function(){
+			    if  ($(window).scrollTop() >= 300){
+			         $('.subbar').css({position:'fixed',top:0,left:0,right:0});
+			    } else {
+			         $('.subbar').css({position:'relative',top:0});
+			        }
+			});
+
 			var today = function () {
 				$(".ani1 .email").show().css("margin-top", "-400px");
 				window.setTimeout(function () {
@@ -303,11 +318,6 @@ Processes like customer support, sales leads, setting up meetings and even produ
 						$(".ani1 .messages")
 						.text(
 							"You've got mail!"
-						);
-						c1++;
-						$(".ani1 .counter")
-						.text(
-							c1
 						);
 						window.setTimeout(function () {
 							$(".ani1 .email")
@@ -369,62 +379,11 @@ Processes like customer support, sales leads, setting up meetings and even produ
 								}, 2500);
 							}, 2500);
 						}, 2500);
-					}, 2000);
-				}, 500);
-			};
-			var tomorrow = function () {
-				$(".ani2 .email").show().css("margin-top", "-400px");
-				window.setTimeout(function () {
-				    $(".ani2 .email")
-			    	.animate({
-			    		marginTop: "0px"
-			    	}, 2000);
-			    	window.setTimeout(function () {
-						$(".ani2 .messages")
-						.text(
-							"You've got mail!"
-						);
-						c2++;
-						$(".ani2 .counter")
-						.text(
-							c2
-						);
-						window.setTimeout(function () {
-							$(".ani2 .using").fadeIn();
-							$(".ani2 .messages")
-							.text(
-								"Let's show it to Bob."
-							);
-							window.setTimeout(function () {
-								$(".ani2 .using").delay(500).fadeOut();
-								$(".ani2 .messages")
-								.text(
-									"Thanks Bob, you da man."
-								);
-								window.setTimeout(function () {
-									$(".ani2 .email")
-							    	.animate({
-							    		marginTop: "-400px"
-							    	}, 2000);
-							    	$(".ani2 .messages")
-									.text(
-										" "
-									);
-									c2--;
-									$(".ani2 .counter")
-									.text(
-										c2
-									);
-									tomorrow();
-								}, 2500);
-							}, 2500);
-						}, 2500);
-					}, 2000);
-				}, 500);
+					}, 500);
+				}, 0);
 			};
 			$(document).ready(function() {	
 				today();
-				tomorrow();
 			});
 		</script>
 
