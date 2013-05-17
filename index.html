@@ -11,169 +11,156 @@
 <meta name="viewport" content="width=device-width">
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="css/bootstrap-responsive.min.css"> -->
 <link rel="stylesheet" href="css/flat-ui.css">
 <link rel="stylesheet" href="css/main.css">
 
 <style>
-	body {
-	color: #605e4b;
-	background: #f9f9f6;
-	}
-	.small_logo:hover {
-	cursor: pointer;
-	}
-	p {
-	padding: 0 0 40px 0;
-	text-align: justify;
-	}
-	ol li {
-	font-size: 14px;
-	margin-bottom: 10px;
-	}
-	.tile {
-	background: #ebedee;
-	text-align: left;
-	z-index: 0;
-	}
-	.row {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	}
-	footer {
-	background: none;
-	margin-bottom: 20px;
-	color: #ebefe6;
-	}
-	footer a {
-	color: #c4d4ec;
-	}
-	footer li {
+body {
+font-size: 18px;
+line-height: 150%;
+color: #15445c;
+background: #e9eced;
+margin: 0;
+padding: 0;
+}
+.menubar {
+width:350px;
+position: fixed;
+top:0;
+bottom:0;
+left:0;
+color: #15445c;
+background: #f6f9fa;
+box-shadow: 1px 0px 10px rgba(0,0,0,0.1);
+border-right: 1px solid rgba(0,0,0,0.2);
+}
+.menubar li {
+	width: 100%;
+	background-color: #f3f3f3;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 	list-style-type: none;
-	margin-bottom: 5px;
-	margin-left: -25px;
-	}
-	.paper {
-	background-color: #fff;
-	margin-bottom: 70px;
-	}
-	.paper2, .paper3 {
-	width: 930px;
-	height: 1900px;
-	top: 306px;
-	position: absolute;
-	box-shadow: 0 0 5px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
-	}
-	.paper2 {
-	margin-left: 10px;
-	background-color: #eaeaea;
-	z-index: -2;
-	transform: rotate(-1.5deg);
-	-moz-transform: rotate(-1.5deg);
-	-o-transform: rotate(-1.5deg);
-	-webkit-transform: rotate(-1.5deg);
-	}
-	.paper3 {
-	margin-left: 5px;
-	background-color: #e8e8e8;
-	z-index: -1;
-	transform: rotate(1deg);
-	-moz-transform: rotate(1deg);
-	-o-transform: rotate(1deg);
-	-webkit-transform: rotate(1deg);
-	}
-	h1 {
+	padding: 20px 30px;
+	width: 290px;
+}
+.menubar li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.menubar li a:hover {
+	color: #0580be;
+}
+.menubar ul {
+	padding: 0;
 	margin: 0;
-	}
-	h1, h2, h3, .logo {
-	color: #77889d;
-	}
-	h4 {
-	line-height: 150%;
-	}
-	.btn.btn-success {
-	background-color: #80c413;
-	}
-	.hero {
-	height: 300px;
-	}
-	.hidden-overflow {
-	overflow: hidden;
-	}
-	.animation {
-	height: 300px;
-	padding: 10px;
-	position: relative;
-	}
-	.animation h2 {
-	color: #5f6e50;
-	}
-	.animation .frames {
-	width: 300px;
-	margin: 0 auto;
-	position: relative;
-	}
-	.mail {
-	position: absolute;
-	margin-top: -250px;
-	}
-	.skype, .arrow, .skype1, .skype2, .skype3, .tomorrow, .note {
-	display: none;
-	}
-	.skype, .arrow, .skype1, .skype2, .skype3, .tomorrow, .note, .mail {
-	position: absolute;
-	width: 300px;
-	}
-	.animation .messages {
+}
+.menubar li:first-child {
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+.bighead, .messages {
 	text-align: center;
-	position: absolute;
-	width: 440px;
-	bottom: 20px;
-	}
-	.probsol {
-	width: 430px;
-	text-align: center;
-	margin-bottom: -10px;
-	}
-	.progress {
-	margin-top: 10px;
-	margin-bottom: 0px;
-	border: solid 1px #5cb529;
-	}
-	.skype2, .skype3 {
-	position: absolute;
-	top: 0;
-	}
-	.subbar .row {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	}
-	.subbar {
-	background: #fff;
-	border-bottom: 1px solid rgba(0,0,0,0.15);
-	box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
-	z-index: 1000;
-	}
-	.subbar .btn {
-	margin-top: 3px;
-	padding-bottom: 7px;
-	}
-	.logo_small {
-	display: none;
-	}
-	.progress .bar {
-	background-color: #5cb529;
-	}
-	@media (max-width: 979px) {
-	body {
-	padding-top: 0px;
-	}
-	}
-	@media (min-width: 1200px) {
-	
-	}
+}
+.container {
+padding-left: 350px;
+}
+.logo img {
+	width: 280px;
+	padding: 30px;
+}
+p {
+padding: 0 0 40px 0;
+text-align: justify;
+}
+ol li {
+font-size: 14px;
+margin-bottom: 10px;
+}
+.tile {
+background: #ebedee;
+text-align: left;
+z-index: 0;
+color: #486d8e;
+}
+h1 {
+margin: 0;
+}
+h1, h2, h3, .logo, a {
+color: #184459;
+}
+h4 {
+line-height: 150%;
+}
+.btn {
+color: #595959;
+text-transform: uppercase;
+font-weight: bold;
+padding: 6px 10px 7px 12px;
+background-color: rgba(0,0,0,0.2);
+}
+.btn.btn-success {
+background: #80c413;
+color: white;
+}
+.btn.btn-success:hover {
+background: #73af11;
+color: white;
+}
+.hidden-overflow {
+overflow: hidden;
+}
+.animation {
+height: 300px;
+padding: 10px;
+position: relative;
+}
+.animation h2 {
+color: #5f6e50;
+}
+.animation .frames {
+width: 300px;
+margin: 0 auto;
+position: relative;
+}
+.mail {
+margin-top: -250px;
+}
+.arrow, .skype1, .skype2, .skype3, .tomorrow, .note, .more, .about {
+display: none;
+}
+.arrow, .skype1, .skype2, .skype3, .tomorrow, .note, .mail {
+position: absolute;
+width: 300px;
+}
+.progress {
+margin-top: 10px;
+margin-bottom: 15px;
+border: solid 1px #5cb529;
+}
+.skype2, .skype3 {
+position: absolute;
+top: 0;
+}
+.logo_small {
+display: none;
+}
+.progress .bar {
+background-color: #5cb529;
+}
+.replaybutton.btn {
+display: block;
+width: 130px;
+margin: 20px auto -50px;
+}
+.more, .about {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+@media (max-width: 979px) {
+
+}
+@media (min-width: 1200px) {
+
+}
 </style>
 
 <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -183,35 +170,47 @@
 	<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-	<div class="container">
+<div class="menubar">
 
-		<div class="row">
-			<div class="span2">
-				<img src="img/logo_small.png"/>
-			</div>
-			<div class="span2"></div>
-			<div class="span2">
-				<div class="progress">
-					<div class="bar" style="width: 20%;"></div>
-				</div>
-			</div>
-			<div class="span3">
-				<span class="signup_count">10/50</span><span style="margin:15px">sign-ups</span>
-				<a class="btn btn-success" style="margin-right: 20px;">Sign up</a>
-			</div>
-			<div class="span3">
-				<a href="#moreModal" role="button" class="btn" data-toggle="modal">Learn more</a>
-				<a href="#aboutModal" role="button" class="btn" data-toggle="modal">About us</a>
-			</div>
+<a class="logo" href="www.colabmail.com"><img src="img/logo_small.png"/></a>
+<ul>
+	<li>
+	<h3>Mail for teams reinvented.</h3>
+Your inbox is flooded with cc's, you chat and manage to-do's in other apps, but what if e-mail handled this for you?
+	</li>
+	<li>
+		<div class="progress">
+		<div class="bar" style="width: 20%;"></div>
 		</div>
-		
+		<span class="btn"><span class="signup_count">10/50</span><span style="margin-left:10px;margin-right:5px;">sign-ups</span></span>
+		<a class="btn btn-success pull-right">Sign up</a>
+	</li>
+</ul>
+<ul style="position:fixed;bottom:0;">
+	<li>
+		<a href="#" class="homebutton">Home</a>
+	</li>
+	<li>
+		<a href="#" class="morebutton">Learn more</a>
+	</li>
+	<li>
+		<a href="#" class="aboutbutton">About us</a>
+	</li>
+</ul>
+</div>
+
+<div class="container">
+
+	<div class="bigani">
 		<div class="row">
-			<div class="span6 ani1" style="margin-top:100px;">
-				<h1 class="bighead">E-mail today doesn't work:</h1>
+			<div class="span12 ani1" style="margin-top:80px;">
+				<div class="bigwelcome">
+					<h1 class="bighead">E-mail today doesn't work</h1>
+				</div>
 				<h2 class="messages"></h2>
 				<a href="#" class="replaybutton btn" style="display:none;">Replay</a>
 			</div>
-			<div class="span6 hidden-overflow">
+			<div class="span12 hidden-overflow">
 				<div class="animation ani1">
 					<div class="frames">
 						<div class="mail"><img src="img/mail.png" /></div>
@@ -225,82 +224,92 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
-</div>
-			 
-<!-- moreModal -->
-<div id="moreModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel"><img width="130px" style="margin-top:-3px;" src="img/logo_small.png"/></h3>
-  </div>
-  <div class="modal-body">
 	 
-	 <h2> Mail for teams the right way</h2>
-	 <p>
-		 Email is the heart of any business. Productivity tools, to do lists, calendar, Evernote, they all make collaboration easier, but can only compliment and not replace email. There are many solutions out there to manage email in a more efficient way, but they all revolve around the way you prioritize and respond to email, ignoring the fact that what makes your inbox bulky most of the time is the need to cc and fwd email in order to respond to an issue or set up a meeting. ColabMail focuses on the need to collaborate via email while keeping your inbox lean.</p>
-
-	 <h2>The problem</h2>
-	 <p>Email is the ultimate task list. Each and every email is one task that needs to be discussed, optimized and finally executed by your team. But how can someone collaborate on an email? Most users just forward an email to their colleagues, then they create a task in their favorite tool, then they'll discuss the task in Skype and finally at some point the work gets done. This is obviously a messy way to get things done. We believe there is a better way and here is our proposal for the future.</p>
+	<div class="more">
 	
-	 <h2>Socializing email</h2>
-	 <p>ColabMail aims to enable users to collaborate straight from their email client. By adding a layer of collaboration on top of an email that needs to be share, ColabMail will offer the possibility for collaborators to have a shared view of the email, annotations and notes on it and a dedicated chat section. We believe that those additions will revolutionize the way startups, bigger companies and freelancers handle collaboration tasks and manage email.
-Processes like customer support, sales leads, setting up meetings and even product development can become more efficient and less time consuming with ColabMail.</p>
-
-	 <h2>How</h2>
-	 <p>We'll start with Gmail by creating a Firefox Addon that will offer:
-	  <ul>
-		 <li>Email sharing with team members</li>
-		 <li>Chat inside the thread</li>
-		 <li>Annotations and notes inside emails</li>
-	 </ul>
-	 </p>
-		 
-	 <h2>Sign up today!</h2>
-	 <p>
-		 ColabMail will be a subscription service and we want to be sure that there are people out there that need this tool as much as we do and are willing to pay for it. Subscription to ColabMail will cost $3 per month. Pre-approve your subscription with PayPal ColabMail today, to get regular updates on our progress and help us build the best tool possible for your needs. By pre-ordering ColabMail service you won’t get charged anything until the service is live.
-	 </p>
-			 
- 	 <div class="tile">
-		 <ol>
-		 <li>When product launches subscription cost will be $5 per month.</li>
-		 <li>You wont get charged until the product is ready.</li>
-		 <li>If you are not happy with the result once we launch you can refund your charge.</li>
-		 </ol>
-	 </div>
-			
-  </div>
-  <div class="modal-footer">
-    <button href="http://venturegeeks.com/register" class="btn" aria-hidden="true">Pre-order now!</button>
-  </div>
-</div>	
-
-<!-- aboutModal -->
-<div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel"><img width="130px" style="margin-top:-3px;" src="img/logo_small.png"/></h3>
-  </div>
-  <div class="modal-body">
+		<div class="row">
+			<div class="span4"></div>
+			<div class="span7">
+				<h2> Mail for teams the right way</h2>
+				<p>
+				Email is the heart of any business. Productivity tools, to do lists, calendar, Evernote, they all make collaboration easier, but can only compliment and not replace email. There are many solutions out there to manage email in a more efficient way, but they all revolve around the way you prioritize and respond to email, ignoring the fact that what makes your inbox bulky most of the time is the need to cc and fwd email in order to respond to an issue or set up a meeting. ColabMail focuses on the need to collaborate via email while keeping your inbox lean.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span1"></div>
+			<div class="span7">
+				<h2>The problem</h2>
+				<p>Email is the ultimate task list. Each and every email is one task that needs to be discussed, optimized and finally executed by your team. But how can someone collaborate on an email? Most users just forward an email to their colleagues, then they create a task in their favorite tool, then they'll discuss the task in Skype and finally at some point the work gets done. This is obviously a messy way to get things done. We believe there is a better way and here is our proposal for the future.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span4"></div>
+			<div class="span7">
+				<h2>Socializing email</h2>
+				<p>ColabMail aims to enable users to collaborate straight from their email client. By adding a layer of collaboration on top of an email that needs to be share, ColabMail will offer the possibility for collaborators to have a shared view of the email, annotations and notes on it and a dedicated chat section. We believe that those additions will revolutionize the way startups, bigger companies and freelancers handle collaboration tasks and manage email.
+				Processes like customer support, sales leads, setting up meetings and even product development can become more efficient and less time consuming with ColabMail.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span1"></div>
+			<div class="span7">
+				<h2>How</h2>
+				<p>We'll start with Gmail by creating a Firefox Addon that will offer:
+				<ul>
+				<li>Email sharing with team members</li>
+				<li>Chat inside the thread</li>
+				<li>Annotations and notes inside emails</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span4"></div>
+			<div class="span7">
+				<h2>Sign up today!</h2>
+				<p>
+				ColabMail will be a subscription service and we want to be sure that there are people out there that need this tool as much as we do and are willing to pay for it. Subscription to ColabMail will cost $3 per month. Pre-approve your subscription with PayPal ColabMail today, to get regular updates on our progress and help us build the best tool possible for your needs. By pre-ordering ColabMail service you won’t get charged anything until the service is live.
+				</p>
+			</div>
+		</div>
+		
+		<div class="tile">
+		<ol>
+		<li>When product launches subscription cost will be $5 per month.</li>
+		<li>You wont get charged until the product is ready.</li>
+		<li>If you are not happy with the result once we launch you can refund your charge.</li>
+		</ol>
+		</div>
+		
+		<button href="http://venturegeeks.com/register" class="btn" aria-hidden="true">Pre-order now!</button>
 	
-	<h2>Who are you guys?</h2>
-	 <p>
-	   Glad you asked. We are <a href="http://venturegeeks.com/">VentureGeeks</a>, an experienced team of web developers who are passionate about the web.
-	   You can check our <a href="http://venturegeeks.com/">web site</a> or our other <a href="http://instabuck.com">products</a> to see for your self that we can deliver our promise.
-	   <br/><br />
-	   Our website, logo & design were done by <a href="http://www.superpencil.com" target="_blank">Superpencil</a>
-	 </p>
+	</div>	
 	
-	<h2>We are Social</h2>
-	<ul>
+	<div class="about">
+	
+		<h2>Who are you guys?</h2>
+		<p>
+		Glad you asked. We are <a href="http://venturegeeks.com/">VentureGeeks</a>, an experienced team of web developers who are passionate about the web.
+		You can check our <a href="http://venturegeeks.com/">web site</a> or our other <a href="http://instabuck.com">products</a> to see for your self that we can deliver our promise.
+		</p>
+		
+		<h2>The Team</h2>
+
+		<ul class="team">
+			<li><a href="http://www.twitter.com/superpencil_" target="_blank" title="Pascal Verstegen (@superpencil_)"><img alt="Pascal Verstegen (@superpencil_)" src="//api.twitter.com/1/users/profile_image?screen_name=boris&amp;size=normal" class="img-circle" width="60" height="60"></a></li>
+		</ul>
+		
+		<h2>We are Social</h2>
+		<ul>
 		<li><a href="https://facebook.com/VentureGeeks">Facebook</a></li>
 		<li><a href="https://twitter.com/VentureGeeks">Twitter</a></li>
 		<li><a href="https://plus.google.com/105364802485252835027">Google+</a></li>
 		<li><a href="http://www.youtube.com/user/VentureGeeks">YouTube</a></li>
-	</ul>
-			
-  </div>
+		</ul>
+	
+	</div>
+	
 </div>			
 
 <script src="js/vendor/jquery-1.9.1.min.js"></script>
@@ -309,11 +318,18 @@ Processes like customer support, sales leads, setting up meetings and even produ
 
 <script type="text/javascript">
 var today = function () {
-    $(".ani1 .mail").fadeIn().css("margin-top", "-400px").css("right", "0px");
+	$(".ani1 .skype1").hide();$(".ani1 .skype2").hide();$(".ani1 .skype3").hide();$(".ani1 .tomorrow").hide();$(".ani1 .arrow").hide();$(".ani1 .note").hide();$(".ani1 .mail").hide();
+    $(".ani1 .mail").css("margin-top", "-400px").css("right", "0px").show();
+    $(".ani1 .bighead")
+            .text(
+            " ");
+            $(".ani1 .messages")
+                .text(
+                " ");
     window.setTimeout(function () {
         $(".ani1 .bighead")
             .text(
-            "E-mail today doesn't work:");
+            "E-mail today doesn't work");
         $(".ani1 .mail")
             .animate({
             marginTop: "0px"
@@ -330,19 +346,34 @@ var today = function () {
                 $(".ani1 .arrow").fadeIn();
                 $(".ani1 .messages")
                     .text(
-                    "Being forwarded to Bob");
+                    "You forward it to Bob");
                 $(".ani1 .arrow").fadeOut();
                 window.setTimeout(function () {
-                    $(".ani1 .skype1").fadeIn();
                     $(".ani1 .messages")
                         .text(
-                        "Talked about over Skype");
+                        "Bob replies to get on Skype");
+                    $(".ani1 .mail")
+                        .animate({
+                        right: "0px"
+                    }, 1000);
                     window.setTimeout(function () {
-                        $(".ani1 .skype2").delay(100).fadeIn();
+                    $(".ani1 .mail").fadeOut();
+                    $(".ani1 .skype1").fadeIn();
+                    window.setTimeout(function () {
+                        $(".ani1 .skype2").fadeIn();
+                        $(".ani1 .messages")
+                            .text(
+                            "Hey Bob...");
+                        window.setTimeout(function () {
                         $(".ani1 .messages")
                             .text(
                             "Bob replies with solution");
                         $(".ani1 .skype3").delay(500).fadeIn();
+                        $(".ani1 .mail")
+                            .animate({
+                            right: "-800px"
+                        }, 0);
+                        $(".ani1 .mail").fadeIn();
                         window.setTimeout(function () {
                             $(".ani1 .skype1").fadeOut();
                             $(".ani1 .skype2").fadeOut();
@@ -353,24 +384,34 @@ var today = function () {
                             }, 1000);
                             $(".ani1 .messages")
                                 .text(
-                                "Sent reply to Jack");
+                                "Bob e-mails you his response");
+                                window.setTimeout(function () {
+                                $(".ani1 .messages")
+                                .text(
+                                "Forward to Jack");
+                                $(".ani1 .mail")
+				                    .animate({
+				                    right: "-600px"
+				                }, 1000);
+				                $(".ani1 .arrow").fadeIn();
+				                $(".ani1 .messages")
+				                    .text(
+				                    "You forward it to Jack");
+				                $(".ani1 .arrow").fadeOut();
                             window.setTimeout(function () {
                                 $(".ani1 .mail").fadeOut();
                                 $(".ani1 .messages")
                                     .text(
-                                    "Total of 4 e-mails sent");
-                                $(".ani1 .messages").delay(500).fadeOut();
-                                $(".ani1 .bighead").delay(500).fadeOut();
+                                    "4 e-mails and a Skype conversation");
                                 window.setTimeout(function () {
                                     $(".ani1 .bighead")
                                         .text(
-                                        "This is how we'll solve it:");
+                                        "This is how we'll fix e-mail");
                                     $(".ani1 .messages")
                                         .text(
                                         " ");
-                                    $(".ani1 .bighead").fadeIn();
-                                    $(".ani1 .messages").fadeIn();
                                     $(".ani1 .mail").css("margin-top", "-400px");
+                                    $(".ani1 .mail").css("right", "0px");
                                     $(".ani1 .mail").fadeIn();
                                     window.setTimeout(function () {
                                         $(".ani1 .mail")
@@ -380,7 +421,7 @@ var today = function () {
                                         window.setTimeout(function () {
                                             $(".ani1 .messages")
                                                 .text(
-                                                "New e-mail from Jack");
+                                                "You receive a new e-mail from Jack");
                                             window.setTimeout(function () {
                                                 $(".ani1 .tomorrow").fadeIn();
                                                 $(".ani1 .mail")
@@ -389,72 +430,67 @@ var today = function () {
                                                 }, 1000);
                                                 $(".ani1 .messages")
                                                     .text(
-                                                    "Share with Bob");
+                                                    "You simply share it with Bob");
                                                 window.setTimeout(function () {
-                                                    $(".ani1 .mail")
-                                                        .animate({
-                                                        marginTop: "70px"
-                                                    }, 1000);
-                                                    $(".ani1 .tomorrow")
-                                                        .animate({
-                                                        marginTop: "20px"
-                                                    }, 1000);
                                                     $(".ani1 .messages")
                                                         .text(
                                                         "Bob leaves note on the e-mail");
                                                     $(".ani1 .note").fadeIn();
+                                                    $(".ani1 .note")
+                                                        .animate({
+                                                        marginTop: "-50px"
+                                                    }, 1000);
                                                     window.setTimeout(function () {
-                                                        $(".ani1 .note").fadeOut();
-                                                        $(".ani1 .tomorrow").fadeOut();
-                                                        $(".ani1 .mail")
-                                                            .animate({
-                                                            right: "-500px"
-                                                        }, 1000);
-                                                        $(".ani1 .arrow").fadeIn();
-                                                        $(".ani1 .messages")
+                                                    	$(".ani1 .messages")
                                                             .text(
-                                                            "Reply sent to Jack");
-                                                        $(".ani1 .arrow").fadeOut();
+                                                            "Jack sees the note and that's it.");
+                                                    	$(".ani1 .note")
+	                                                        .animate({
+	                                                        marginTop: "0px"
+	                                                    }, 1000);
+	                                                    $(".ani1 .mail")
+	                                                        .animate({
+	                                                        marginTop: "0px"
+	                                                    }, 1000);
                                                         window.setTimeout(function () {
-                                                            $(".ani1 .mail").fadeOut();
                                                             $(".ani1 .messages")
                                                                 .text(
-                                                                "Only 2 e-mails sent");
-                                                            $(".ani1 .messages").fadeOut();
+                                                                "Now you've only sent 1 e-mail");
                                                             window.setTimeout(function () {
-                                                                $(".ani1 .messages").fadeIn();
+                                                            	$(".ani1 .note").fadeOut();
+                                                            	$(".ani1 .mail")
+			                                                        .animate({
+			                                                        marginTop: "25px"
+			                                                    }, 1000);
+			                                                    $(".ani1 .tomorrow")
+			                                                        .animate({
+			                                                        marginTop: "-25px"
+			                                                    }, 1000);
                                                                 $(".ani1 .bighead")
                                                                     .text(
                                                                     "Sign up today");
                                                                 $(".ani1 .messages")
                                                                     .text(
-                                                                    "And help us build the future of e-mail!");
+                                                                    "Sign up & help us build the future of e-mail!");
                                                                 $(".ani1 .replaybutton").fadeIn();
                                                                 $(".ani1 .replaybutton").click(function () {
                                                                     $(".ani1 .replaybutton").fadeOut();
                                                                     today();
                                                                 });
-                                                                $(".ani1 .mail")
-												                    .animate({
-												                    right: "0px"
-												                }, 0);
-												                $(".ani1 .mail").animate({marginTop: "-500px"}, 0);
-                                                                	window.setTimeout(function () {
-                                                                	$(".ani1 .mail").fadeIn();
-	                                                                $(".ani1 .mail").animate({marginTop: "0px"}, 2000);
-																	$(".ani1 .tomorrow").delay(2000).fadeIn();
-																	$(".ani1 .mail").animate({marginTop: "80px"}, 1000);
-                                                                	}, 2000);
-                                                            }, 2000);
+                                                            }, 3000);
                                                         }, 2500);
                                                     }, 2500);
                                                 }, 2500);
                                             }, 2500);
                                         }, 500);
                                     }, 500);
-                                }, 2500);
+                                }, 3500);
+                            }, 2500);
                             }, 2500);
                         }, 2500);
+                        }, 2500);
+                    
+                    }, 2500);
                     }, 2500);
                 }, 2500);
             }, 2500);
@@ -462,6 +498,24 @@ var today = function () {
     }, 500);
 };
 $(document).ready(function() {	
+	$(".homebutton").click(function(){
+		$(".more").fadeOut();
+		$(".about").fadeOut();
+		$(".bigani").fadeOut();
+		$(".bigani").delay(500).fadeIn();
+	});
+	$(".morebutton").click(function(){
+		$(".more").fadeOut();
+		$(".about").fadeOut();
+		$(".bigani").fadeOut();
+		$(".more").delay(500).fadeIn();
+	});
+	$(".aboutbutton").click(function(){
+		$(".more").fadeOut();
+		$(".about").fadeOut();
+		$(".bigani").fadeOut();
+		$(".about").delay(500).fadeIn();
+	});
 	today();
 });
 </script>
