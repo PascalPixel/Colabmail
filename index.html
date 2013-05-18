@@ -20,52 +20,23 @@ body {
 font-size: 18px;
 line-height: 150%;
 color: #15445c;
-background: #e9eced;
+background: #d5d5d5;
 margin: 0;
 padding: 0;
 }
 .menubar {
-width:350px;
+width:100%;
 position: fixed;
-top:0;
-left:0;
 bottom:0;
+height: 50px;
 color: #15445c;
 background: #f6f9fa;
-box-shadow: 1px 0px 10px rgba(0,0,0,0.1);
-border-right: 1px solid rgba(0,0,0,0.2);
-}
-.menubar li {
-	width: 100%;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	list-style-type: none;
-	padding: 20px 30px;
-	width: 290px;
-}
-.menubar li a {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-}
-.menubar li a:hover {
-	color: #0580be;
-}
-.menubar ul {
-	padding: 0;
-	margin: 0;
-}
-.menubar li:first-child {
-	border-top: 1px solid rgba(0,0,0,0.1);
+padding-top: 15px;
+box-shadow: 0px -3px 10px rgba(0,0,0,0.1);
+border-top: 1px solid rgba(0,0,0,0.2);
 }
 .bighead, .messages {
 	text-align: center;
-}
-.container {
-padding-left: 350px;
-}
-.logo img {
-	width: 280px;
-	padding: 30px;
 }
 p {
 padding: 0 0 40px 0;
@@ -154,35 +125,6 @@ margin: 20px auto;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
-
-/* RESPONSIVE */
-	.container {
-		width: 620px;
-	}
-	.span12 {
-		width: 600px;
-	}
-	.span6 {
-		width: 300px;
-	}
-@media (max-width: 979px) {
-	.bigani, .container, .morebutton, .aboutbutton, .homebutton {display: none;}
-	.menubar {width: 100%;}
-	.menubar li {
-		width: 80%;
-	}
-}
-@media (min-width: 1200px) {
-	.span12 {
-		width: 840px;
-	}
-	.span6 {
-		width: 400px;
-	}
-	.container {
-		width: 840px;
-	}
-}
 </style>
 
 <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -193,37 +135,33 @@ margin: 20px auto;
 <![endif]-->
 
 <div class="menubar">
-
-<a class="logo" href="www.colabmail.com"><img src="img/logo_small.png"/></a>
-<ul>
-	<li>
-	<h3>Mail for teams reinvented.</h3>
-Your inbox is flooded with cc's, you chat and manage to-do's in other apps, but what if e-mail handled this for you?
-	</li>
-	<li>
-		<div class="progress">
-		<div class="bar" style="width: 20%;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="span2">
+				<a class="logo" href="www.colabmail.com"><img src="img/logo_small.png"/></a>
+			</div>
+			<div class="span3">
+				<div class="progress">
+					<div class="bar" style="width: 20%;"></div>
+				</div>
+			</div>
+			<div class="span3">
+				<span class="btn"><span class="signup_count">10/50</span><span style="margin-left:10px;margin-right:5px;">sign-ups</span></span>
+				<a class="btn btn-success pull-right">Sign up</a>
+			</div>
+			<div class="span4">
+				<a href="#" class="btn homebutton">Home</a>
+				<a href="#" class="btn morebutton">Learn more</a>
+				<a href="#" class="btn aboutbutton">About us</a>
+			</div>
 		</div>
-		<span class="btn"><span class="signup_count">10/50</span><span style="margin-left:10px;margin-right:5px;">sign-ups</span></span>
-		<a class="btn btn-success pull-right">Sign up</a>
-	</li>
-	<li>
-		<a href="#" class="homebutton">Home</a>
-	</li>
-	<li>
-		<a href="#" class="morebutton">Learn more</a>
-	</li>
-	<li>
-		<a href="#" class="aboutbutton">About us</a>
-	</li>
-</ul>
+	</div>
 </div>
 
 <div class="container">
-
 	<div class="bigani">
 		<div class="row">
-			<div class="span6 ani1" style="margin-top:80px;">
+			<div class="span6 ani1" style="margin-top:50px;">
 				<div class="bigwelcome">
 					<h1 class="bighead">The Problem</h1>
 				</div>
@@ -242,7 +180,7 @@ Your inbox is flooded with cc's, you chat and manage to-do's in other apps, but 
 					</div>
 				</div>
 			</div>
-			<div class="span6 ani2" style="margin-top:80px;">
+			<div class="span6 ani2" style="margin-top:50px;">
 				<div class="bigwelcome">
 					<h1 class="bighead">The Solution</h1>
 				</div>
