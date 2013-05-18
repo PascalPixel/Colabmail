@@ -20,7 +20,7 @@ body {
 font-size: 18px;
 line-height: 150%;
 color: #15445c;
-background: #d5d5d5;
+background: #e8e8e8;
 margin: 0;
 padding: 0;
 }
@@ -34,9 +34,6 @@ background: #f6f9fa;
 padding-top: 15px;
 box-shadow: 0px -3px 10px rgba(0,0,0,0.1);
 border-top: 1px solid rgba(0,0,0,0.2);
-}
-.bighead, .messages {
-	text-align: center;
 }
 p {
 padding: 0 0 40px 0;
@@ -134,57 +131,18 @@ margin: 20px auto;
 	<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="menubar">
-	<div class="container">
-		<div class="row">
-			<div class="span2">
-				<a class="logo" href="www.colabmail.com"><img src="img/logo_small.png"/></a>
-			</div>
-			<div class="span3">
-				<div class="progress">
-					<div class="bar" style="width: 20%;"></div>
-				</div>
-			</div>
-			<div class="span3">
-				<span class="btn"><span class="signup_count">10/50</span><span style="margin-left:10px;margin-right:5px;">sign-ups</span></span>
-				<a class="btn btn-success pull-right">Sign up</a>
-			</div>
-			<div class="span4">
-				<a href="#" class="btn homebutton">Home</a>
-				<a href="#" class="btn morebutton">Learn more</a>
-				<a href="#" class="btn aboutbutton">About us</a>
-			</div>
-		</div>
-	</div>
-</div>
 
-<div class="container">
+
+<div class="container" style="padding-top:50px;">
 	<div class="bigani">
 		<div class="row">
-			<div class="span6 ani1" style="margin-top:50px;">
+			<div class="span6 ani1" style="margin-top:80px;">
 				<div class="bigwelcome">
-					<h1 class="bighead">The Problem</h1>
+					<h3 class="bighead"> </h3>
 				</div>
-				<h2 class="messages"></h2>
-				<a href="#" class="replaybutton btn" style="display:none;">Replay</a>
-				<div class="animation hidden-overflow">
-					<div class="frames">
-						<div class="mail"><img src="img/mail.png" /></div>
-						<div class="skype1"><img src="img/skype1.png" /></div>
-						<div class="skype2"><img src="img/skype2.png" /></div>
-						<div class="skype3"><img src="img/skype3.png" /></div>
-						<div class="arrow"><img src="img/arrow.png" /></div>
-						<div class="tomorrow"><img src="img/tomorrow.png" /></div>
-						<div class="note"><img src="img/note.png" /></div>
-						<div class="number4"><img src="img/number4.png" /></div>
-					</div>
-				</div>
+				<h1 class="messages"></h1>
 			</div>
-			<div class="span6 ani2" style="margin-top:50px;">
-				<div class="bigwelcome">
-					<h1 class="bighead">The Solution</h1>
-				</div>
-				<h2 class="messages"></h2>
+			<div class="span6 ani1">
 				<a href="#" class="replaybutton btn" style="display:none;">Replay</a>
 				<div class="animation hidden-overflow">
 					<div class="frames">
@@ -196,19 +154,7 @@ margin: 20px auto;
 						<div class="tomorrow"><img src="img/tomorrow.png" /></div>
 						<div class="note"><img src="img/note.png" /></div>
 						<div class="number2"><img src="img/number2.png" /></div>
-					</div>
-				</div>
-			</div>
-			<div class="span12 ani3" style="margin-top:80px;display:none;">
-				<div class="bigwelcome">
-					<h1 class="bighead"> </h1>
-				</div>
-				<h2 class="messages"></h2>
-				<a href="#" class="replaybutton btn" style="display:none;">Replay</a>
-				<div class="animation hidden-overflow">
-					<div class="frames">
-						<div class="mail"><img src="img/mail.png" /></div>
-						<div class="tomorrow"><img src="img/tomorrow.png" /></div>
+						<div class="number4"><img src="img/number4.png" /></div>
 					</div>
 				</div>
 			</div>
@@ -302,7 +248,31 @@ margin: 20px auto;
 	
 	</div>
 	
-</div>			
+</div>
+
+<div class="menubar">
+	<div class="container">
+		<div class="row">
+			<div class="span2">
+				<a class="logo" href="www.colabmail.com"><img src="img/logo_small.png"/></a>
+			</div>
+			<div class="span3">
+				<div class="progress">
+					<div class="bar" style="width: 20%;"></div>
+				</div>
+			</div>
+			<div class="span3">
+				<span class="btn"><span class="signup_count">10/50</span><span style="margin-left:10px;margin-right:5px;">sign-ups</span></span>
+				<a class="btn btn-success pull-right">Sign up</a>
+			</div>
+			<div class="span4">
+				<a href="#" class="btn homebutton">Home</a>
+				<a href="#" class="btn morebutton">Learn more</a>
+				<a href="#" class="btn aboutbutton">About us</a>
+			</div>
+		</div>
+	</div>
+</div>		
 
 <script src="js/vendor/jquery-1.9.1.min.js"></script>
 
@@ -310,109 +280,26 @@ margin: 20px auto;
 
 <script type="text/javascript">
 var tomorrow = function () {
-    $(".ani2 .skype1").hide();
-    $(".ani2 .skype2").hide();
-    $(".ani2 .skype3").hide();
-    $(".ani2 .tomorrow").hide();
-    $(".ani2 .arrow").hide();
-    $(".ani2 .note").hide();
-    $(".ani2 .mail").hide();
-    $(".ani2 .number2").hide();
-    $(".ani1 .number4").hide();
-    $(".ani2 .mail").css("margin-top", "-400px").css("right", "0px").show();
-        $(".ani2 .messages")
-            .text(
-            " ");
-        $(".ani2 .mail").css("margin-top", "-400px");
-        $(".ani2 .mail").css("right", "0px");
-        $(".ani2 .mail").fadeIn();
-        window.setTimeout(function () {
-            $(".ani2 .mail")
-                .animate({
-                marginTop: "0px"
-            }, 2000);
-            window.setTimeout(function () {
-                $(".ani2 .messages")
-                    .text(
-                    "New e-mail from a client");
-                window.setTimeout(function () {
-                    $(".ani2 .tomorrow").fadeIn();
-                    $(".ani2 .mail")
-                        .animate({
-                        marginTop: "50px"
-                    }, 1000);
-                    $(".ani2 .messages")
-                        .text(
-                        "Shared with Bob");
-                    window.setTimeout(function () {
-                        $(".ani2 .messages")
-                            .text(
-                            "Bob leaves note on the e-mail");
-                        $(".ani2 .note").fadeIn();
-                        $(".ani2 .note")
-                            .animate({
-                            marginTop: "-50px"
-                        }, 1000);
-                        window.setTimeout(function () {
-                        	$(".ani2 .note, .ani2 .mail")
-	                            .animate({
-	                            marginTop: "0px"
-	                        }, 1000);
-	                        $(".ani2 .messages")
-	                            .text(
-	                            "Write your reply");
-                        	window.setTimeout(function () {
-                        		$(".ani2 .note").fadeOut();
-	                        	$(".ani2 .tomorrow").fadeOut();
-	                            $(".ani2 .messages")
-	                            .text(
-	                            "Send reply to client");
-	                            $(".ani2 .mail").delay(400)
-	                            .animate({
-	                            right: "-600px"
-	                            }, 1000);
-	                            $(".ani2 .arrow").fadeIn();
-	                            $(".ani2 .messages")
-	                                .text(
-	                                "You forward it to Client");
-	                            $(".ani2 .arrow").fadeOut();
-	                            window.setTimeout(function () {
-	                                $(".ani2 .messages")
-	                                    .text(
-	                                    "Number of e-mails exchanged");
-	                                $(".ani2 .number2").fadeIn();
-	                            }, 2500);
-	                        }, 2500);
-                        }, 2500);
-                    }, 2500);
-                }, 2500);
-            }, 500);
-        }, 500);
-
-    //Today
-    $(".ani1 .skype1").hide();
-    $(".ani1 .skype2").hide();
-    $(".ani1 .skype3").hide();
-    $(".ani1 .tomorrow").hide();
-    $(".ani1 .arrow").hide();
-    $(".ani1 .note").hide();
-    $(".ani1 .mail").hide();
+	$(".ani1 .messages, .ani1 .skype1, .ani1 .skype2, .ani1 .skype3, .ani1 .tomorrow, .ani1 .arrow, .ani1 .note, .ani1 .mail, .ani1 .bighead").hide();
     $(".ani1 .mail").css("margin-top", "-400px").css("right", "0px").show();
     $(".ani1 .messages")
         .text(
         " ");
-    window.setTimeout(function () {
-        $(".ani1 .bighead")
+    $(".ani1 .bighead")
             .text(
-            "The Problem");
+            "This is the problem with e-mail:");
+    window.setTimeout(function () {
+    	$(".ani1 .bighead").fadeIn();
         $(".ani1 .mail")
             .animate({
             marginTop: "0px"
         }, 2000);
+        $(".ani1 .messages").hide();
         window.setTimeout(function () {
             $(".ani1 .messages")
                 .text(
                 "New e-mail from a client");
+            $(".ani1 .messages").fadeIn();
             window.setTimeout(function () {
                 $(".ani1 .mail")
                     .animate({
@@ -450,7 +337,7 @@ var tomorrow = function () {
                                     $(".ani1 .mail").fadeIn();
                                     $(".ani1 .messages")
                                     .text(
-                                    "Send reply to client");
+                                    "Send reply to the client");
                                     $(".ani1 .mail")
                                     .animate({
                                     right: "-600px"
@@ -458,57 +345,128 @@ var tomorrow = function () {
                                     $(".ani1 .arrow").fadeIn();
                                     $(".ani1 .messages")
                                         .text(
-                                        "You forward it to Client");
+                                        "You forward it to the client");
                                     $(".ani1 .arrow").fadeOut();
                                     window.setTimeout(function () {
                                         $(".ani1 .mail").fadeOut();
                                         $(".ani1 .messages")
                                         .text(
                                         "Number of e-mails exchanged");
-                                        $(".ani3 .mail")
+                                        $(".ani1 .mail")
                                             .animate({
                                             marginTop: "0px"
                                         }, 1000);
                                         $(".ani1 .number4").fadeIn();
                                         window.setTimeout(function () {
-                                            $(".ani1").fadeOut();
-                                            $(".ani2").fadeOut();
-                                            $(".ani3 .mail").hide();
-                                            $(".ani3").fadeIn();
-                                            $(".ani2 .number4").fadeOut();
-                                            $(".ani1 .number2").fadeOut();
-                                            window.setTimeout(function () {
-                                            	$(".ani3 .bighead")
-	                                                    .text(
-	                                                    "Sign up today");
-                                                $(".ani3 .messages")
-                                                    .text(
-                                                    "Sign up & help us build the future of e-mail!");
-                                                window.setTimeout(function () {
-                                                	$(".ani3 .mail").fadeIn();
-		                                            $(".ani3 .tomorrow").fadeIn();
-	                                                $(".ani3 .mail")
-	                                                    .animate({
-	                                                    marginTop: "25px"
-	                                                }, 1000);
-	                                                $(".ani3 .tomorrow")
-	                                                    .animate({
-	                                                    marginTop: "-25px"
-	                                                }, 1000);
-	                                                
-	                                                $(".ani3 .replaybutton").fadeIn();
-	                                                $(".ani3 .replaybutton").click(function () {
-	                                                    $(".ani3").fadeOut();
-	                                                    $(".ani1").fadeIn();
-		                                                $(".ani2").fadeIn();
-	                                                    tomorrow();
-	                                                });
-                                                }, 1000);
-                                            }, 1000);
-                                        }, 3000);
-                                    }, 2500);
-                                }, 2500);
+                                            $(".ani1 .mail, .ani1 .bighead, .ani1 .messages, .ani1 .number4").fadeOut();
+                                            $(".ani1 .mail").css("margin-top", "-400px").css("right", "0px").show();
+                                        	window.setTimeout(function () {
+                                        		$(".ani1 .bighead")
+									            .text(
+									            "This is how we'll fix it:");
+										        $(".ani1 .messages")
+										            .text(
+										            " ");
+										        $(".ani1 .mail").css("margin-top", "-400px");
+										        $(".ani1 .mail").css("right", "0px");
+										        $(".ani1 .mail").fadeIn();
+										        $(".ani1 .bighead").fadeIn();
+										        window.setTimeout(function () {
+										            $(".ani1 .mail")
+										                .animate({
+										                marginTop: "0px"
+										            }, 2000);
+										            window.setTimeout(function () {
+										                $(".ani1 .messages")
+										                    .text(
+										                    "New e-mail from a client");
+										                $(".ani1 .messages").delay(200).fadeIn();
+										                window.setTimeout(function () {
+										                    $(".ani1 .tomorrow").fadeIn();
+										                    $(".ani1 .mail")
+										                        .animate({
+										                        marginTop: "50px"
+										                    }, 1000);
+										                    $(".ani1 .messages")
+										                        .text(
+										                        "Shared with Bob");
+										                    window.setTimeout(function () {
+										                        $(".ani1 .messages")
+										                            .text(
+										                            "Bob leaves note on the e-mail");
+										                        $(".ani1 .note").fadeIn();
+										                        $(".ani1 .note")
+										                            .animate({
+										                            marginTop: "-50px"
+										                        }, 1000);
+										                        window.setTimeout(function () {
+										                        	$(".ani1 .note, .ani1 .mail")
+											                            .animate({
+											                            marginTop: "0px"
+											                        }, 1000);
+											                        $(".ani1 .messages")
+											                            .text(
+											                            "Write your reply");
+										                        	window.setTimeout(function () {
+										                        		$(".ani1 .note, .ani1 .tomorrow").fadeOut();
+											                            $(".ani1 .messages")
+											                            .text(
+											                            "Send reply to the client");
+											                            $(".ani1 .mail").delay(400)
+											                            .animate({
+											                            right: "-600px"
+											                            }, 1000);
+											                            $(".ani1 .arrow").fadeIn();
+											                            $(".ani1 .messages")
+											                                .text(
+											                                "You forward it to the client");
+											                            $(".ani1 .arrow").fadeOut();
+											                            window.setTimeout(function () {
+											                                $(".ani1 .messages")
+											                                    .text(
+											                                    "Number of e-mails exchanged");
+											                                $(".ani1 .number2").fadeIn();
+											                                window.setTimeout(function() {
+											                                	$(".ani1 .number2").fadeOut();
+								                                            	$(".ani1 .bighead")
+									                                                    .text(
+									                                                    "Sign up today");
+								                                                $(".ani1 .messages")
+								                                                    .text(
+								                                                    "Sign up & help build the future!");
+								                                                window.setTimeout(function () {
+								                                                	$(".ani1 .mail").fadeIn();
+										                                            $(".ani1 .tomorrow").fadeIn();
+									                                                $(".ani1 .mail")
+									                                                    .animate({
+									                                                    marginTop: "25px"
+									                                                }, 1000);
+									                                                $(".ani1 .tomorrow")
+									                                                    .animate({
+									                                                    marginTop: "-25px"
+									                                                }, 1000);
+									                                                
+									                                                $(".ani1 .replaybutton").fadeIn();
+									                                                $(".ani1 .replaybutton").click(function () {
+									                                                    $(".ani1").hide();
+									                                                    $(".ani1").fadeIn();
+										                                                $(".ani1").fadeIn();
+									                                                    tomorrow();
+									                                                });
+								                                                }, 1000);
+											                                }, 2500);
+											                            }, 2500);
+										                            }, 2500);
+										                        }, 2500);
+									                        }, 2500);
+									                    }, 2500);
+									                }, 2500);
+									            }, 500);
+									        }, 1000);
+	                                    }, 3000);
+                            }, 2500);
                         }, 2500);
+                    }, 2500);
                 }, 2500);
             }, 2500);
         }, 500);
